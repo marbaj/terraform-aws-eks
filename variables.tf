@@ -75,7 +75,12 @@ variable "map_users_count" {
 }
 
 variable "subnets" {
-  description = "A list of subnets to place the EKS cluster and workers within."
+  description = "A list of subnets to place the EKS cluster."
+  type        = "list"
+}
+
+variable "worker_subnets" {
+  description = "A list of subnets to place the workers within."
   type        = "list"
 }
 
